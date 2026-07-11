@@ -11,14 +11,14 @@ Homebrew tap for NetEase Yunxin desktop applications.
 ## Install
 
 ```bash
-brew tap netease/yunxin
+brew tap netease-im/yunxin
 brew install --cask tokbox
 ```
 
 Or, in one line:
 
 ```bash
-brew install --cask netease/yunxin/tokbox
+brew install --cask netease-im/yunxin/tokbox
 ```
 
 ## Upgrade
@@ -31,7 +31,7 @@ brew upgrade --cask tokbox
 
 ```bash
 brew uninstall --cask tokbox
-brew untap netease/yunxin
+brew untap netease-im/yunxin
 ```
 
 ## Releasing a new version
