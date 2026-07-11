@@ -1,14 +1,21 @@
 #!/usr/bin/env bash
 #
-# One-line installer for Tokbox via Homebrew Cask.
+# Bootstrap script for the netease-im/yunxin Homebrew tap.
+#
+# Installs Homebrew (if missing), adds the tap, and optionally installs
+# one or more casks from it.
 #
 # Usage:
+#   # Just add the tap, then list available casks:
 #   curl -fsSL https://raw.githubusercontent.com/netease-im/homebrew-yunxin/main/install.sh | bash
+#
+#   # Add the tap and install specific cask(s):
+#   curl -fsSL https://raw.githubusercontent.com/netease-im/homebrew-yunxin/main/install.sh | bash -s -- tokbox
+#   curl -fsSL ... | bash -s -- tokbox another-app
 #
 set -euo pipefail
 
 TAP="netease-im/yunxin"
-CASK="tokbox"
 REPO="https://github.com/netease-im/homebrew-yunxin"
 
 # Colors (only when output is a TTY).
@@ -16,9 +23,10 @@ if [ -t 1 ]; then
   BOLD="\033[1m"
   GREEN="\033[32m"
   RED="\033[31m"
+  CYAN="\033[36m"
   RESET="\033[0m"
 else
-  BOLD=""; GREEN=""; RED=""; RESET=""
+  BOLD=""; GREEN=""; RED=""; CYAN=""; RESET=""
 fi
 
 info()  { printf "${BOLD}==>${RESET} %s\n" "$*"; }
@@ -43,12 +51,22 @@ if ! command -v brew >/dev/null 2>&1; then
     || die "Homebrew installed but 'brew' not on PATH. Open a new terminal and re-run."
 fi
 
-# --- Tap + install --------------------------------------------------------
+# --- Add tap --------------------------------------------------------------
 
 info "Adding tap ${TAP}..."
 brew tap "${TAP}" "${REPO}"
 
-info "Installing ${CASK}..."
-brew install --cask "${CASK}"
+# --- Install requested casks, or list what's available --------------------
 
-ok "${CASK} installed! Find it in /Applications or Spotlight."
+if [ "$#" -gt 0 ]; then
+  for cask in "$@"; do
+    info "Installing ${cask}..."
+    brew install --cask "${cask}"
+    ok "${cask} installed."
+  done
+else
+  # No args: list what this tap provides so the user can choose.
+  printf "\nAvailable casks in ${CYAN}${TAP}${RESET}:\n\n"
+  brew search --casks "${TAP}/" 2>/dev/null | sed 's/^/  /'
+  printf "\nInstall with: ${BOLD}brew install --cask <name>${RESET}\n"
+fi

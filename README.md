@@ -12,12 +12,20 @@ Homebrew tap for NetEase Yunxin desktop applications.
 
 ### One-line installer (recommended)
 
+Add the tap and list available casks:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/netease-im/homebrew-yunxin/main/install.sh | bash
 ```
 
-This installs Homebrew (if missing), adds the tap, and installs the cask
-in one go.
+Add the tap and install a specific cask (e.g. `tokbox`) in one go:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/netease-im/homebrew-yunxin/main/install.sh | bash -s -- tokbox
+```
+
+The script installs Homebrew (if missing), adds the tap, then installs the
+named cask(s). Pass multiple names to install several at once.
 
 ### Manual
 
