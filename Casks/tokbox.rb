@@ -1,8 +1,8 @@
 cask "tokbox" do
-  version "0.3.1"
-  sha256 "28a645d51ca197e88e063596b3d8cbfa5f3e65dd1d8e94f37d6ef562e763845c"
+  version "0.3.2"
+  sha256 "15d9f26454dedb79947bc3fbcf522f398ab7843f119ad4fa394808632518d49d"
 
-  url "https://yx-web-nosdn.netease.im/package/1784120034252/Tokbox-#{version}-universal.dmg"
+  url "https://yx-web-nosdn.netease.im/package/1784172446979/Tokbox_#{version}_universal.dmg"
   name "Tokbox"
   desc "NetEase IM desktop client"
   homepage "https://tokbox.netease.im/"
