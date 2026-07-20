@@ -8,7 +8,10 @@
       "url": "https://yx-web-nosdn.netease.im/package/1784553935072/Tokbox_0.6.0_x64_en-US.msi",
       "sha256": "00737ba24b114a1ab6a67491495810cc656e8292cbd82b7467751aee6549987a",
       "installerType": "msi",
-      "interactiveArgs": []
+      "installerArgs": [
+        "/qn",
+        "/norestart"
+      ]
     }
   }
 }

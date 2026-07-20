@@ -103,7 +103,7 @@ try {
         }
     }
 
-    $configuredArgs = @($package.interactiveArgs)
+    $configuredArgs = @($package.installerArgs)
     if ($package.installerType -eq "msi") {
         $executable = Join-Path $env:SystemRoot "System32\msiexec.exe"
         $arguments = @("/i", ('"{0}"' -f $installerPath)) + $configuredArgs
