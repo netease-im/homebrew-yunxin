@@ -2,7 +2,6 @@
 param(
     [string]$ManifestUri = "https://raw.githubusercontent.com/netease-im/homebrew-yunxin/main/Casks/tokbox.json",
     [string]$ManifestPath,
-    [switch]$Quiet,
     [switch]$SkipSignatureCheck
 )
 
@@ -104,7 +103,7 @@ try {
         }
     }
 
-    $configuredArgs = if ($Quiet) { @($package.silentArgs) } else { @($package.interactiveArgs) }
+    $configuredArgs = @($package.interactiveArgs)
     if ($package.installerType -eq "msi") {
         $executable = Join-Path $env:SystemRoot "System32\msiexec.exe"
         $arguments = @("/i", ('"{0}"' -f $installerPath)) + $configuredArgs
