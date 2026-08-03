@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "product": "Tokbox",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "signaturePublisher": "NetEase (Hangzhou) Network Co., Ltd",
   "architectures": {
     "x64": {
-      "url": "https://yx-web-nosdn.netease.im/package/1785297232979/Tokbox_0.7.2_x64_en-US.msi",
-      "sha256": "ad93fdf39dadcda814e5822098a684b17d0fa7de448bdefed7e75093f08a19b5",
+      "url": "https://yx-web-nosdn.netease.im/package/1785578690428/Tokbox_0.8.0_x64_en-US.msi",
+      "sha256": "35111cc545e9ea23c00d3bfd74d7a2c71968adbfbd7683baee4d6c2db2146529",
       "installerType": "msi",
       "installerArgs": [
         "/qn",
