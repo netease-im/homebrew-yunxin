@@ -5,8 +5,8 @@
   "signaturePublisher": "NetEase (Hangzhou) Network Co., Ltd",
   "architectures": {
     "x64": {
-      "url": "https://yx-web-nosdn.netease.im/package/1787108881451/Tokbox_0.11.0_x64_en-US.msi",
-      "sha256": "dfae41076af0556233c85e8c36b581c1b7a743063270f25791a6a5a8dd85c66d",
+      "url": "https://yx-web-nosdn.netease.im/package/1787217413039/Tokbox_0.11.0_x64_en-US.msi",
+      "sha256": "f414e16cc7bf2af85b2d1ffc2f7fab0f63760de66558c682ddae0ac4ae2fb8ed",
       "installerType": "msi",
       "installerArgs": [
         "/qn",
