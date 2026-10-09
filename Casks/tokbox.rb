@@ -1,6 +1,6 @@
 cask "tokbox" do
-  version "0.13.0"
-  sha256 "5c3b7b1ae2045d10b7268d9cea881bb0b3a7e247ffc21d434282070695bf334e"
+  version "0.13.1"
+  sha256 "aa5fbfb2b262ff381d570ef0b8d03e6fd726b1b68a4858bbff8ca2a27b7ac291"
 
   url "https://github.com/netease-im/tokbox-releases/releases/download/#{version}/Tokbox_#{version}_universal.dmg"
   name "Tokbox"

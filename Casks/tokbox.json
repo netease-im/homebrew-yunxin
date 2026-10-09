@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "product": "Tokbox",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "signaturePublisher": "NetEase (Hangzhou) Network Co., Ltd",
   "architectures": {
     "x64": {
-      "url": "https://github.com/netease-im/tokbox-releases/releases/download/0.13.0/Tokbox_0.13.0_x64_en-US.msi",
-      "sha256": "244fc3cf11858b14c9bd5a12c33658267ee29ed5639377a41ac28e88b37291fb",
+      "url": "https://github.com/netease-im/tokbox-releases/releases/download/0.13.1/Tokbox_0.13.1_x64_en-US.msi",
+      "sha256": "e72df87ed966a39b09727004b1dd717567f72f49e2d739ac93fcc4e765c0a95b",
       "installerType": "msi",
       "installerArgs": [
         "/qn",
